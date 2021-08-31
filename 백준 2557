@@ -1,0 +1,12 @@
+#파이썬
+
+print("Hello World!")
+
+//c++
+#include <iostream>
+
+int main(){
+    
+    printf("Hello World!");
+        return 0;
+}
