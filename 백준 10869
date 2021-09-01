@@ -1,0 +1,18 @@
+#파이썬
+a, b = map(int, input().split())
+print(a+b)
+print(a-b)
+print(a*b)
+print(a//b) #몫
+print(a%b)
+
+//c++
+include<iostream>
+using namespace std;
+
+int main() {
+	int a, b;
+	cin >> a >> b;
+	cout << a + b << endl<<a - b << endl<<a * b <<endl<< a / b << endl<<a % b << endl;
+
+}
