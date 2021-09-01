@@ -1,0 +1,17 @@
+#파이썬 
+a, b = map(int, input().split())   #파이썬은 숫자형 제한이 없음 float 을 사용해도 된다 
+print(a/b)
+
+//c++
+#include <iostream>
+using namespace std;
+ 
+int main() {
+    double A, B;
+ 
+    cin >> A >> B;
+    cout.precision(10); //cout.precision을 이용해서 소수점 10자리까지 출력
+    cout << A / B;
+}
+
+//"cout << fixed;" 의 뜻은 소수점을 고정시켜 표현을 하겠다는 뜻이며 "cout.precision(6);" 의 뜻은 6자리까지 표현한다. 대신에 반올림을 해준다 .
