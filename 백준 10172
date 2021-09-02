@@ -1,0 +1,20 @@
+#파이썬 
+
+print("|\_/|")
+print("|q p|   /}")
+print('( 0 )"""\\')   #\앞에 \를 하나더 추가 
+print('|"^"`    |')
+print("||_/=\\\__|")  #마찬가지로 \앞에 \추가 
+
+//c++
+#include<iostream>
+using namespace std;
+
+int main() {
+	printf("|\\_/|\n");
+	printf("|q p|   /}\n");
+	printf("( 0 )\"\"\"\\\n");  
+	printf("|\"^\"`    |\n");
+	printf("||_/=\\\\__|\n");
+}
+//c++ 은 \앞에\  "앞에 \ 를 사용해주면 된다 .!
