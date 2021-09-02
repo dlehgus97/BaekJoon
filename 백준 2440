@@ -1,0 +1,26 @@
+#파이썬
+a=int(input())
+for i in reversed(range(a+1)):
+    print(i*"*")
+    
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		for (int k = 0; k < a-i; k++) {            
+			printf("*");
+
+		}
+		printf("\n");
+	}
+}
+
+//int i 안의 또다른 반복문이기에 예를 들어 a 가 7이면  i는 {0,1,2,3,4,5,6}이 될수 있는 것이다.
+//그떄 int k 의 반복문에 a-i의 값은 k<7(7-0) 부터 시작하게 된다. 따라서 반복문에 따라 k가 증가 하고 a-i값은 작아지게 되면서 *의 반복 횟수도 줄게 된다.
+//ex> a-i 가 (7-4)일떄  k<3 이되고 k값이 될수 있는 {0,1,2} 세번의 횟수에따라 ***이 나오게 된다.
+//결론적으로 k가 2가 나온다고 **가 두개가 되는것이 아닌 0,1,2 라는 반복문 횟수에 따라 *를 더해주게 되는것이다 
