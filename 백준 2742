@@ -1,0 +1,17 @@
+#파이썬
+a=int(input())
+for i in reversed(range(a)):   #for i in range(a,0,-1):
+    print(i+1)
+
+//c++
+#include<iostream>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+	for (int i = a; i >=1 ; i--) {
+		cout << i << "\n";
+	}
+
+}
