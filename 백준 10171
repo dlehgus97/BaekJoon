@@ -1,0 +1,18 @@
+#파이썬
+
+print("\\    /\\")
+print(" )  ( ')")
+print('(  /  )')
+print(" \\(__)|")
+
+//c++
+#include<iostream>
+using namespace std;
+
+int main() {
+	printf("\\    /\\""\n");
+	printf(" )  ( ')""\n");
+	printf("(  /  )""\n");
+	printf(" \\(__)|""\n");
+}
+//개 문제와 마찬가지로 \, " 앞에 \추가하는것 
