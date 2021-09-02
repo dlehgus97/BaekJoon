@@ -1,0 +1,22 @@
+#파이썬
+a=int(input())    #int를 반드시 붙여준다.
+for i in range (1,a+1):
+    result = i * "*"
+    print(result)
+
+
+//c++
+#include<iostream>
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+	for (int i = 1; i <= a; i++) {
+		for (int k = 0; k < i; k++) {
+			printf("*");
+
+		}
+		printf("\n");
+	}
+}
