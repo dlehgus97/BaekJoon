@@ -1,0 +1,14 @@
+#파이썬
+print(27)
+print("dlehgus97")
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	printf("28\n");
+	printf("dlehgus97");
+}
+//백준 문제중에 가장 쓸모없는 문제였다..
