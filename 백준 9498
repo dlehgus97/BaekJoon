@@ -1,0 +1,37 @@
+#파이썬
+a=int(input())
+if a>=90 and a<=100:
+    print("A")
+elif a>=80 and a<=89:
+    print("B")
+elif a>=70 and a<=79:
+    print("C")
+elif a>=60 and a<=69:
+    print("D")
+else:
+    print("F")
+
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+    if (a >= 90 and a <= 100)
+        printf("A");
+    else if
+        (a >= 80 and a <= 89)
+        printf("B");
+    else if (a >= 70 and a <= 79)
+        printf("C");
+    else if (a >= 60 and a <= 69) 
+        printf("D");
+        else
+        printf("F");
+
+}
+//요즘 파이썬만 하다 보니까 if문과 else if 문에 파이썬의 :를 자꾸 ;로 바꾸는 습관이 된다.
+//문을 종결시키는 세미콜론 주의...!
