@@ -1,0 +1,23 @@
+#파이썬
+a=int(input())
+for i in range(1,a+1):
+    print(" " * (a-i) + "*" * i)
+    
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+	for (int i = 1; i <= a; i++) {
+		for (int k = 0; k < a - i; k++) 
+			printf(" ");
+			for (int k = 0; k < i; k++) 
+				printf("*");
+				printf("\n");
+	}
+
+}
+//오른쪽 정렬로 할수 있을까 ?? 기억이 안나서 그냥 " " 으로 했는데 한반 알아보도록 ..
