@@ -1,0 +1,16 @@
+#파이썬
+
+a = int(input())
+print(abs(a-1946))  #절댓값을 주었는데 생각해보니까 1946년 전에는 학교가 개교가 안되었을듯 ... 불필요!
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a; int b = 1946;
+	cin >> a;
+	cout << a - b;
+}
+//printf 말고 cout 사용!
