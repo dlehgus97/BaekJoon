@@ -1,0 +1,8 @@
+#파이썬
+C = list(map(int, input()))
+C.sort(reverse=True)
+for i in C:
+    print(i, end ="")
+    
+    
+//c++ 살짝 공부좀 하고 다시 풀어봐야겠다 ... 벡터를 사용할지 
