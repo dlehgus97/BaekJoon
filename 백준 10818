@@ -1,0 +1,29 @@
+#파이썬
+a= map(int , input().split())
+C = list(map(int, input().split()))
+print(min(C),max(C))
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int min = 1000001; //min 값은 범위안에서 바로 초기화 되기에 범위값만 설정해놓으면 된다.
+	int max = -1000001; //max 값을 설정 해놓은 다음에 1<b<1000000 인 범위에서 바로 초기화 될수 있도록 하기 위해 -를 붙여준다.
+	int a;
+	cin >> a;
+	int b;
+	for (int i = 0; i < a; i++) {
+		cin >> b;
+		if (b < min) {
+			min = b;
+		}
+		if (b > max) {
+			max = b;
+		}
+	}
+	cout << min << " " << max;
+	return 0;
+}
+//min = b를 b = min 으로 해서 틀린문제 ... 반성하자 ..
