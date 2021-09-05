@@ -1,0 +1,33 @@
+#파이썬
+H,M = map(int,input().split())
+if M <45:
+    if H == 0:   #0시일때는 -1라는 값이 나오기때문에  23시가 되도록 설정 
+        H = 23
+        M += 60    #60이라는 사이클에 게속 돌게 하기위해 60을 더해준다 .
+    else :
+        H -= 1 
+        M += 60
+print(H,M-45)
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int H; int M;
+	cin >> H >> M;
+	if (M < 45) {
+		if (H == 0) {
+			H = 23;
+			M += 60;
+		}
+
+		else {
+		H -= 1;
+		M += 60;
+		}
+	
+}
+	cout << H <<" "<< M - 45;
+}
