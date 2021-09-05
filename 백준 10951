@@ -1,0 +1,32 @@
+#파이썬
+while True: 
+    try: 
+        a, b = map(int, input().split()) 
+        print(a+b) 
+    except: 
+        break
+
+#이문제를 처음에 아래와 같이 풀었을떄 런타임 오류가 발생하였다. 런타임 오류의 원인은 무한으로 print(a+b)를 반복하게 되기떄문이다. 그래서 try except 문을 구글링하여 찾게되었다.
+#try - except 구문의 기본적인 구조는 try 구문 쪽에 에러가 발생할 가능성이 있는 코드를 작성하고 except 구문 쪽에 예외 발생 시 실행할 코드를 작성하는 것
+#결국 무한적으로 보이지만 except를 통해 빠져 나가 다시 try로 가 input()을 받게 되는것이다. 잘 활용할수 있도록! ...
+
+#while True:
+#   a,b=map(int,input().split())
+#   print(a+b)
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a; int b;
+
+	while (cin >> a >> b) {
+		cout << a + b << endl;	
+	}
+	return 0;
+}
+
+//c++로 했을떄 역시 출력초과가 발생하였고 이를 해결하기위해 EOF를 잘 공부해야겠다는 생각도 하였다. 현재로서는 할수있는게 처음에 while(1)로 했던부분을 변경해주는것이였다.
+//while (cin >> a >> b) 이런식으로 바꿔주면 a,b값을 받았을떄만 while 문을 진행하도록 하여 출력초과를 벗어나게 되었다...
