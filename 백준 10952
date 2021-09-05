@@ -1,0 +1,24 @@
+#파이썬
+while True:
+    a, b = map(int, input().split())
+    if a == 0 and b == 0:
+        break
+    print(a+b)
+    
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a; int b;
+	
+	while (1) {
+		cin >> a >> b;
+		if (a == 0 and b == 0)    //if(a == 0 && b== 0) , if(a!=0 || b!=0) 도 사용가능하다 
+			break;
+		cout << a + b<<endl;
+	}
+}
+//c++에서 처음에  if 문 위에 cout<< a+b << endl;을 사용했다. 사용했을떄 값을 동일하게 나왔는데 틀렸다는결과가 나왔고 문제를 다시보니 0 0이 나올때는 break가 되면서
+//계산이 되면 안되는것이였다. cout문을 if문 위에 사용하면 0 + 0 도 계산 되면서 break 되는걸 확인할수 있다 . 결국 예제 입출력값을 꼼꼼하게 봐야한다...
