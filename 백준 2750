@@ -1,0 +1,12 @@
+#파이썬 
+a  = int(input())
+ 
+b = []
+for i in range (a):
+    b.append(int(input()))
+ 
+b.sort() # 오름차순 정렬을 하게 해준다 .
+for i in b:   #sort 한 출력값을 출력하기위해  
+    print(i)
+   
+//마찬기로 c++로 버블정렬을 할수있게 공부를 좀 해야할것 같다는 느낌을 많이 받는다 ....
