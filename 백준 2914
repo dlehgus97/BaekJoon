@@ -1,0 +1,16 @@
+#파이썬
+a,b,=map(int,input().split())
+print(a*(b-1)+1)
+
+//c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a; int b;
+	cin >> a >> b;
+	cout << a * (b - 1) + 1;
+}
+
+//음악이 38곡일떄 평균값이 반올림이 아닌 그냥 올림을해서 24가 되었을때 결국 23.000001 이나와도 24가 된다는 뜻이다. 주어진 b에 대입해보았을떄
+//23<b<24라는 뜻이 나온다 . 그래서 b-1을 해준값에 +1을 해주면 된다는 것이다.
