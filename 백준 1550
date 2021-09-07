@@ -1,0 +1,17 @@
+#파이썬
+print(int(input(),16))
+
+//c++
+#include <iostream>
+using namespace std;
+
+int main(void) {
+	int a;
+	cin >> hex >> a;
+	cout << a;
+}
+
+//dec : 스트림 str 이 정수 입출력 연산 시에 10 진법을 사용하도록 한다..
+//hex : 스트림 str 이 정수 입출력 연산 시에 16 진법을 사용하도록 한다. 
+//oct : 스트림 str 이 정수 입출력 연산 시에 8 진법을 사용하도록 한다
+//참고할것 ..
