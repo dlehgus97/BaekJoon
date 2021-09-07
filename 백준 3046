@@ -1,0 +1,13 @@
+#파이썬
+a,b,=map(int,input().split())
+print((2*b)-a)
+
+//c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a; int b;
+	cin >> a >> b;
+	cout << (2 * b) - a;
+}
