@@ -1,0 +1,22 @@
+#파이썬
+ham = []
+drink = []
+for i in range (0,3):
+    result1 = int(input())
+    ham.append(result1)
+for j in range(0,2):
+    result2 = int(input())
+    drink.append(result2)
+price = min(ham) + min(drink) -50
+print(price)
+
+//c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b, c, d, e;
+	cin >> a >> b >> c >> d >> e;
+	int result = min(a, min(b, c)) + min(d, e);
+	cout << result-50;
+}
