@@ -1,0 +1,27 @@
+#파이썬
+a =0
+for i in range(1,6):
+    result = int(input())
+    if result<40:
+        result =40
+    a += result
+print(a//5)
+
+
+//c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a;
+	int result = 0;
+	for (int i = 0; i < 5; i++) {
+		cin >> a;
+		if (a < 40) 
+			a = 40;
+				
+		
+		result += a;
+	}
+	cout << result / 5;
+}
