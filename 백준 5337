@@ -1,0 +1,14 @@
+#파이썬
+print(".  .   .")
+print("|  | _ | _. _ ._ _  _")
+print("|/\\|(/.|(_.(_)[ | )(/.")
+
+//c++
+#include <iostream>
+using namespace std;
+int main()
+{
+	printf(".  .   .\n");
+	printf("|  | _ | _. _ ._ _  _\n");
+	printf("|/\\|(/.|(_.(_)[ | )(/.\n");
+}
