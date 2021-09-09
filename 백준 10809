@@ -1,0 +1,52 @@
+#파이썬
+a = input()
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+for i in alphabet:
+    if i in a:
+        print(a.index(i),end = ' ')  #a 의 인덱스와 i의 인덱스가 같을떄 
+    else :
+        print("-1", end = ' ')
+        
+ a = input()
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+for i in alphabet:
+    print(a.find(i), end = ' ')     #find 함수를 통해 찾아낼수도 있다.
+ 
+//c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string str;
+    cin >> str;
+
+    int word;
+    for (char a = 'a'; a <= 'z'; a++) {
+        word = str.find(a);
+        cout << word<< " ";
+    }
+
+    cout << endl;
+ 
+}
+//다른방법이 있나 찾던중 string::npos 함수의 사용을 알게 되었다.
+#include<iostream>
+using namespace std;
+
+int main() {
+    string a;
+    string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    cin >> a;
+    for (int i = 0; i < alphabet.length(); i++) {
+        if (a.find(alphabet[i]) == string::npos)
+            cout << -1 << " ";
+        else {
+            cout << a.find(alphabet[i]) << " ";
+            continue;
+        }
+    }
+}
+
+//string::find 는 찾는 문자열의 첫번쨰 인덱스를 반환하는 함수
+//string::npos 는 찾는 문자열이 없는 경우 string::npos로 반환하는것
