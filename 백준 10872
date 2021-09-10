@@ -1,0 +1,22 @@
+#파이썬
+a = int(input())
+result = 1
+for i in range (1,a+1):
+    result *= i
+print(result)
+
+//c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a;
+    cin >> a;
+    int result = 1;
+    for (int i = 1; i < a+1; i++) {
+        result *= i;
+    }
+    cout << result;
+ 
+}
