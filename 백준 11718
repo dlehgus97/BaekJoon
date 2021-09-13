@@ -1,0 +1,29 @@
+#파이썬
+while True:
+    try:
+        a = input()
+        print(a)
+    except:
+        break   #그냥했다가 출력초과 나오는거 보고 과거에 사용했던 try except 문을 사용했더니 바로 되었다.
+    
+/c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string str;
+	while (1)
+	{
+		getline(cin, str);  // 한줄을 입력한다. 엔터 전까지 
+
+		if (str == "")  // if (str == "")를 통해 입력이 들어오지 않는 ""인 상태라면 break
+			break;
+
+		cout << str << endl;   
+	}
+    return 0;
+}
+
+//getline 함수를 위해 #inclue <string> 을 사용하였다. 
