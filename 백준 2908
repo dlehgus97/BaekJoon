@@ -1,0 +1,35 @@
+#파이썬
+a,b=input().split()
+a = int(a[::-1]) 
+b = int(b[::-1])
+if a>b:
+    print(a)
+else :
+    print(b)
+
+//c++
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    string a,b;
+    cin >> a >> b;
+ 
+    reverse(a.begin(), a.end());
+    reverse(b.begin(), b.end());
+    for (int i = 0; i < 2; i++) {
+        if ((int)a[i] > (int) b[i]) {
+            cout << a;
+            break;
+        }
+        else if ((int)a[i] < (int)b[i]) {
+            cout << b;
+            break;
+        }
+    }
+}
+//reverse 함수를 쓰기위해 헤더에 #include<algorithm> 을 사용하였다. 
+//string 함수를 int 로 변경해주는것 
