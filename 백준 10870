@@ -1,0 +1,36 @@
+#파이썬
+def fibonacci(n):
+    if n==0:
+        return n
+    elif n==1:
+        return n
+    else :
+        return fibonacci(n-1) + fibonacci(n-2)     
+n = int(input())                                   
+print(fibonacci(n))
+
+//c++
+#include <iostream>
+
+using namespace std;
+
+
+int Fibonacci(int num)
+{
+
+    if (num == 0)
+        return 0;
+    else if (num == 1)
+        return 1;
+    else                                                //게속해서반복적으로 돌아간다 n==2가되서 fibonacci(1)+fibonacci(0) 이 되면서 fibonacci(3) 은 fibonacci(2)+fibonacci(1) =
+        return Fibonacci(num - 1) + Fibonacci(num - 2);  //fibonacci(1) + fibonacci(0) + fibonacci(1) 이 된다. 결국 fibonacci(1)과, fibonacci(0)의 사이클을 이용해서 푸는문제다
+
+}
+
+int main() {
+    int num;
+    cin >> num;
+    cout << Fibonacci(num);
+    return 0;
+
+}
