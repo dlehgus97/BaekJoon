@@ -1,0 +1,37 @@
+#파이썬
+a= int(input())
+C = list(map(int, input().split()))
+C.sort()
+result = 0
+k=0
+for i in C:
+    result += i
+    k += result
+print(k)
+
+//c++
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int a, result = 0, sum = 0;
+    int b[1000] = { };  
+    cin >> a;
+
+    for (int i = 0; i < a; i++) {
+        cin >> b[i];   //a개의 숫자를 입력받는다 
+    }
+
+    
+    sort(b, b + a);   //시간을 재배열 한다 . sort 함수를 위해 #include<algorithm>을 사용해준다 . b부터 b+a까지를 재배열 
+
+    
+    for (int i = 0; i < a; i++) {
+        result += b[i];
+        sum += result;
+    }
+
+    cout << sum << endl;
+}
