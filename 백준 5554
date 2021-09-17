@@ -1,0 +1,20 @@
+#파이썬
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+total = a+b+c+d
+print(total//60)
+print(total-(60*(total//60)))
+
+//
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	int total = a+b+c+d;
+	cout << total / 60 << endl;
+	cout << (total - (60 * (total / 60)));
+}
