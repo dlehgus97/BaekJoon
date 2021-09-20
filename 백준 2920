@@ -1,0 +1,46 @@
+#파이썬
+a = list(map(int,input().split()))
+if a == [1,2,3,4,5,6,7,8]:
+    print("ascending")
+elif a == [8,7,6,5,4,3,2,1]:
+    print("descending")
+else :
+    print("mixed")
+    
+#파이썬 2     
+a = list(map(int,input().split()))
+if a == sorted(a):
+    print("ascending")
+elif a ==sorted(a,reverse=True):
+    print("descending")
+else :
+    print("mixed")
+    
+//c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int Arr[8];
+	int asc= 0, des = 0;
+
+	for (int i = 0; i < 8; i++)
+	{
+		cin >> Arr[i];
+	
+		if (Arr[i] == i + 1)
+			asc++;    // (Arr[i] < Arr[i + 1] 이면 asc가 1추가된다
+		else if (Arr[i] == 8-i)
+			des++;	  // Arr[i] == 8-i 이면 des가 1추가된다
+	}
+
+	if (asc == 8)		//asc 가 8이될라고하면 sort 된 순으로 진행되어야 하기에 8이면 ascending 이다 
+		cout << "ascending";
+	else if (des == 8)	// des 도 마찬가리도 sort가 revese 된 순으로 진행되어야하기에 8이면 descending이다
+		cout << "descending";
+	else				//중간에 하나라도 순서대로 진행되지 않으면 8이 될수 없기 떄문에 else 로 한다.
+		cout << "mixed";
+
+	return 0;
+}
