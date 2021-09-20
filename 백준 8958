@@ -49,3 +49,15 @@ int main()
 	return 0;
 	
 }
+
+
+추가적으로 
+N = int(input())
+
+for i in range(N):
+    a = input()
+    score = 0
+    for j in a:
+       score = a.count('O')
+    print(score) 
+    #O의 개수만 찾는것이다 .
