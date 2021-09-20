@@ -1,0 +1,51 @@
+#파이썬
+a = int(input())
+
+for i in range(a):
+    b = input()
+    score = 0
+    sumScore = 0
+    for i in b:
+        if i == 'O':
+            score += 1              #i = O이면 +1씩더해준다 값에 
+        else:
+            score = 0
+        sumScore += score           # i =X 이면 다시 score이 다시 0으로 돌아가 1부터 다시 더해준다
+    print(sumScore)
+
+//c++ 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a;
+	int score = 0;
+	int result = 0;
+	char arr[80] = {};
+	cin >> a;
+	for (int i = 0; i < a; i++) 
+	{	
+		cin >> arr;
+
+		for (int j = 0; j < 80; j++)
+		{
+			if (arr[j] == 0) 
+			{
+				score = 0;
+				break;          //반드시 깨줘야한다 .
+			}
+			if (arr[j] == 'O') 
+			{
+				score += 1;
+				result += score;
+			}
+			else 
+				score =0;    //실수로 여기서 score == 0인 비교 연산자를 넣어버려서 score이 0으로 초기화가 되지않아 1의 개수만큼 쭉나열해서 더하는 것이 되어버렸다. 주의할것
+		}
+		cout << result << "\n";
+		result = 0;   //result 값을 다시 0으로 해준다음에 진행해야한다. 여기서도 비교연산자가 진행될시 전체적으로 다 더하게 된다. 
+	}
+	return 0;
+	
+}
