@@ -1,0 +1,33 @@
+#파이썬
+T =int(input())
+for i in range (T):
+    h,w,n = map(int,input().split())
+    floor = n % h
+    hosu = n//h +1
+    if n % h == 0:
+        floor = h
+        hosu = n//h 
+    print((floor*100)+hosu)
+
+//c++
+#include <iostream>
+#include <algorithm>  
+
+using namespace std;
+
+int main() {
+	int T;
+	cin >> T;
+	int h, w, n;
+	for (int i = 0; i < T; i++) {
+		cin >> h >> w >> n;
+		int floor = n % h;
+		int hosu = n / h + 1;
+		if (n % h == 0) {
+			floor = h;
+			hosu = n / h;
+		}
+		cout << floor * 100 + hosu << "\n";
+	}
+
+}
