@@ -1,0 +1,36 @@
+#파이썬
+while True:
+    a = list(map(int,input().split()))
+    a.sort()
+    if sum(a) == 0 :
+        break   
+    if((a[0]*a[0])+(a[1]*a[1]) == (a[2]*a[2])):
+       print("right")
+    else :
+       print("wrong")
+         
+//c++
+#include <iostream>
+#include <algorithm>  
+
+using namespace std;
+
+int main() {
+	int a[3];
+
+	while (1) {
+		cin >> a[0] >> a[1] >> a[2];
+		sort(a, a + 3); //#include <algorithm>을 사용한 이유 
+		if (a[0] == 0 && a[1] == 0 && a[2] == 0) {
+			break;
+		}
+		if ((a[0] * a[0]) + (a[1] * a[1]) == a[2] * a[2]) {
+				cout << "right" << endl;
+		}
+		else
+				cout << "wrong" << endl;
+		}
+
+	}
+
+//이 문제는 그냥 피타고라스의 공식만 생각하였다. a[0],a[1],a[2] 가 당연히 오름차순으로 정리 되있을꺼라는 생각에 오류를 범했다 . sort 를 생각했어야 한다 .!
