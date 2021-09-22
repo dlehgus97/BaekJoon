@@ -1,0 +1,8 @@
+#파이썬
+a = int(input())
+
+for i in range(a):
+    num, word = input().split()
+    for x in word:
+        print(x*int(num), end='')  
+    print('')
