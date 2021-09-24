@@ -1,0 +1,7 @@
+#파이썬
+A, B = map(int, input().split())
+C = int(input())
+t = A*60 + B + C
+h = t//60 % 24
+m = t%60
+print(h, m)
