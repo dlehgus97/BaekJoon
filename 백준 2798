@@ -1,0 +1,41 @@
+#파이썬 
+a , b =map(int,input().split())
+c= list(map(int,input().split()))
+result = []
+for i in range(a):
+    for j in range(i+1 , a):
+        for k in range(j+1 ,a):
+            d = c[i]+c[j]+c[k]
+            if d<=b:
+                result.append(d)
+print(max(result))
+
+//c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int a; int b;
+	int result = 0;
+	int c[98] = {};  //3<=c<=100 
+	cin >> a >> b;
+	for (int i = 0; i < a; i++) {
+		cin >> c[i];
+	}
+	for (int i = 0; i < a; i++) {
+		for (int j = i +1; j<a; j++ )
+			for (int k = j + 1; k < a; k++) {
+				if (c[i] + c[j] + c[k] <= b && c[i] + c[j] + c[k] > result)    //합이 b보다는 작아야하며 result = 0일떄 보다 커야한다. 그렇게 result 값을 키우다보면 
+					result = c[i] + c[j] + c[k];                                // result 값은 max가 된다 .
+			}
+		
+	}
+
+cout << result;
+
+
+}
+
+
+//브르투 포스 문제 ...
