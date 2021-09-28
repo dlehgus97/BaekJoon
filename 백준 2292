@@ -1,0 +1,30 @@
+#파이썬
+a = int(input())
+b = 1
+c = 1
+while a>b:
+    b += 6*c
+    c += 1
+print(c)
+
+//c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a;
+    int b = 1;
+    int c = 1;
+    cin >> a;
+    while (a > b) {
+        b += 6 * c;       
+        c += 1;
+    }
+    cout << c;
+    
+}
+
+//a>b 이기때문에 a가 1일떄는 1이 그대로 출력되고 while(a>b)를통해 계차수열 6씩 차이나는 부분을 해결해준다.
+// b += 6 * c; c += 1;  이렇게 while문으로 세트이기떄문에 a<b가 나와도 c += 1;를 마무리 짓고 나와야한다
+//ex) a = 11 c에 2가 들어갈떄 b= 19가되므로 a<b이지만 c += 1까지 마무리 지어야하기떄문에 c는 3이 되는것이다 
