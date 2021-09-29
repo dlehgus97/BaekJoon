@@ -1,0 +1,39 @@
+#파이썬
+a= int(input())
+result = 0
+while a>=0:
+    if(a%5==0):   #5로 나눠지면 가장 적게 가져갈수 있다. 
+        result += a//5
+        print(result)
+        break
+    a -= 3      #if조건문이 충족하지 않았을떄는 a의값에 그냥 3씩 뺴주는 반복문 
+    result +=1  #마찬가지로 +1해준다 세개를 가방에 담았다라는 뜻 
+else:  #while else 일때는 while문의 조건이 거짓으로 바뀔때 실행된다. 
+        print(-1)   #a-3을 게속해주면서 5의배수를 찾는 문제인데 마지막남은수를 0으로 맞춰야하는데 거짓이라는 뜻은 답을 구할수 없다는것
+
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int a;
+    int result = 0;
+    cin >> a;
+    while (a >= 0) {
+        if (a % 5 == 0) {
+            result += a / 5;
+            cout << result;
+            return 0;  
+        }
+        a -= 3;
+        result += 1;
+       
+    }
+    cout << -1 << endl;
+    }
+    
+   //처음에 if문 마무리를 break;를 사용하였는데 그럴경우 while문만 끝나면서  결과값 "-1" 이라는 결과가 나온다 . 생각해보니까 return 0;을 사용하여 아예 마무리했어야하는데 ..
+  
+   
