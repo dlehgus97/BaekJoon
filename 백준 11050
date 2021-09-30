@@ -1,0 +1,40 @@
+#파이썬
+a,b= list(map(int, input().split()))
+
+result1 = 1
+result2 = 1
+for i in range (a,a-b,-1):
+    result1 *= i
+
+for j in range (1,b+1):
+    result2 *= j
+
+print(result1//result2)
+
+//c++
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int a; int b;
+    int result1 = 1;
+    int result2 = 1;
+    cin >> a >> b;
+    for (int i = 1; i < a + 1; i++) {
+        result1 *= i;
+    }
+    for (int j = 1; j < b + 1; j++) {
+        result2 *= j;
+    }
+    for (int k = 1; k < a - b + 1; k++) {
+        result2 *= k;
+    }   
+    cout << result1/result2;
+}
+
+//파이썬은 범위를 a, a-b의 내림차순으로해서 b!로 나누면 되었는데 c++로 할떄는 a!을 (a-b)!와 b!곱으로 나눠주었다. 
+
+    
+   
