@@ -1,0 +1,44 @@
+#파이썬 방법 1
+a = list(map(int,input()))
+while a[0] !=0:
+    if a == a[::-1]: #[::-1]은 거꾸로부터 읽는다는 읨 
+        print("yes")
+    else :
+        print("no")
+    a = list(map(int,input())) #while속 조건문이 충족되고나서 다시 입력받는다 .
+ 
+#파이썬 방법 2 
+while True:
+    a = input()  #리스트 대신 선택한 방법
+    if a == "0":
+        break
+    if a == a[::-1]:
+        print("yes")
+    else :
+        print("no")
+
+//c++ 
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    string a;
+
+    while (a != "0") {
+        cin >> a;
+        string b = a;     //a값을 입력받고 reverse 해줘야하는데 그럼 비교 가능한 값이 없기때문에 a를 b에 저장해주고 a는 reverse하여 비교하면된다.
+        reverse(a.begin(), a.end());
+        if (a != "0") {    //a != 0 조건문을 안해주면 cin>>a 가 반복문안에 있기때문에 a==b 로 인식되어 yes를 출력하고 종료된다.
+        if (a == b) cout << "yes" << endl;
+        else cout << "no"<<endl;
+    }
+
+    }
+    return 0;
+}
+
+
+    
+   
