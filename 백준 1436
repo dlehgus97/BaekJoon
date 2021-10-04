@@ -1,0 +1,64 @@
+#파이썬 방법 1
+a = int(input())
+first = 666
+
+while a != 0:
+    if "666" in str(first):
+        a -= 1
+        if a == 0:
+            break
+    first +=1
+print(first)
+
+
+#파이썬 방법 2
+a = int(input())
+first = 666
+b = 0
+
+while(True):
+    if "666" in str(first):
+        b+=1
+        if b == a:
+            print(first)
+            break
+    first += 1
+
+//c++
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+{
+	int a, first, b, temp;
+
+	cin >> a;
+
+	first = 0; // 영화 제목
+	b = 0; // 현재 종말의수 점차 올라감 
+
+	while (b != a)
+	{
+		first++;
+		temp = first;
+
+		
+		while (temp != 0)
+		{
+			if (temp % 1000 == 666) // 666이 세개 이상 들어간수라면 
+			{
+				b++;
+				break;
+			}
+			else temp /= 10; // 666이 어느 자리에 들어가 있는줄 모르기 떄문에 1의 자리부터 소거 하기위해 나눠준다.
+		}
+	}
+	cout << first;
+}
+
+
+//파이썬 방법 1과 방법2의 차이는 변수를 하나더 추가하여 증가할것인지 감소할것인지를 다르게 해준것이다 .
+//c++ 방법은 꽤나 오래 고민했다 ..
