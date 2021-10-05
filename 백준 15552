@@ -1,0 +1,26 @@
+#파이썬
+import sys  # sys을 사용해서 시간을 줄여야한다
+
+a = int(sys.stdin.readline())  #int(input())이 오래 걸리기 때문에 시간을줄이기 위해선 sys.stdin.readline()을 사용해준다
+for _ in range(a):
+    b,c = map(int, sys.stdin.readline().split())
+    print(b+c)
+    
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	cin.tie(NULL); 
+	ios::sync_with_stdio(false);
+	int a;
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		int b, c;
+		cin >> b >> c;
+		cout << b + c<<"\n";
+
+	}
+}
