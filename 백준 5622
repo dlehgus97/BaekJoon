@@ -1,0 +1,11 @@
+#파이썬 
+a = int(input())
+for i in range(a):
+    count = 0
+    c = list(map(int, input().split()))
+    avg = (sum(c)-c[0])/c[0] #sum(c)-c[0] == sum(c[1:])
+    for j in c[1:]:
+        if j  > avg:
+            count+=1
+    r = count/c[0]*100
+    print(f"{r:.3f}%")
