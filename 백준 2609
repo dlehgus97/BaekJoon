@@ -1,0 +1,40 @@
+#파이썬
+a,b = map(int,input().split())
+
+def gcd(a,b):
+    if b==0:
+        return a
+    else :
+        return gcd(b,a%b)    
+
+def lcm(a,b):
+    c = gcd(a,b)
+    return int(c*(a/c)*(b/c))
+
+print(gcd(a,b))
+print(lcm(a,b))
+
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int gcd(int a ,int b) {
+	if (b == 0)
+		return a;
+	else
+		return gcd(b, a % b);
+}
+
+int main() {
+	int a, b;
+	cin >> a >> b;
+	cout << gcd(a, b) << "\n" << a * b / gcd(a, b) << endl;
+
+	}
+  
+  //return gcd(b, a % b); 를 통해 줄여나간다 . ex) 24, 18이 있으면 return gcd(b, a % b);을 통해 18,6이 되고 다시 return gcd(b, a % b);을 통해 6,0이 된다 이떄 b == 0 이 되므로 
+  // gcd(a,b) 는 a를 출력하고 gcd(a,b) == a가 된다 .  그리고 a * b / gcd(a, b) 를 두수를 곱해주고 최대공약수로 나눠주면 최소공배수가 된다.
+  // 파이썬에서는 return int(c*(a/c)*(b/c)) 각각을 나눠주고 곱했다 결과값을 동일하다 .
+
