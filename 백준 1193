@@ -1,0 +1,42 @@
+#파이썬
+a = int(input())
+line = 1
+while a>line:  
+    a -= line   # 1씩 줄여가며 line 을 찾게된다 
+    line += 1   # 결국 남는 수는 해당 line 에서 자릿수를 나타내준다 
+if line % 2 ==0 :   #짝수일떄는 홀수일떄는 분모와 분자가 반대로 나타나기 떄문에 해줘야한다
+     x = a           #x 는 분자를 뜻하고 # y는 분모를 뜻한다 .
+     y = line - a  +1    #a 가 해당라인의 자릿수이기떄문에 뺴준다음 + 1 을해주면 
+else : 
+    x = line - a  +1
+    y = a
+print(x, '/', y, sep='') #sep = ''을통해 공백을 지워준다.
+
+//c++
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a;
+	int line = 1;
+	cin >> a;
+	while (a > line) {
+		a -= line;
+		line += 1;
+	}
+	if (line % 2 == 0) {
+		int x = a;
+		int y = line - a + 1;
+		cout << x << "/" << y;
+	}
+	else {
+		int x = line - a + 1;
+		int y = a;
+		cout << x << "/" << y;
+		}
+		
+}
+
+
