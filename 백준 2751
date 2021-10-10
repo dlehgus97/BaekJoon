@@ -1,11 +1,32 @@
-#파이썬
-N = int(input())
-num = []
+#파이썬  
+a = int(input())
+b = []
+for i in range (a):
+    b.append(int(input()))
 
-for i in range(N):
-    num.append(int(input()))
+b = sorted(b)
 
-num = sorted(set(num))
+for i in range (a):
+    print(b[i])  # 백준에서 python 3로하면 시간초과가 나기떄문에 pypy3로 했다 .
 
-for i in num:
-    print(i)
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(void)
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	int N;
+	int arr[1000000];
+	cin >> N;
+	for (int i = 0; i < N; i++)
+		cin >> arr[i];
+
+	sort(arr, arr + N);   //sort함수를 algorithm 덕분에 편하게 사용했당
+	for (int i = 0; i < N; i++)
+		cout << arr[i] << '\n';
+
+	return 0;
+}
