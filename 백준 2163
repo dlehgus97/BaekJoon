@@ -1,0 +1,18 @@
+#파이썬
+N , M = map(int,input().split())
+result =int(M*N) -1
+print(result)
+
+//c++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int M, N;
+	cin >> N >> M;
+	int result = N * M - 1;
+	cout << result;
+
+}
+
+//초콜릿으 자를떄 가장 적게 자르는 방법은 M x N 크기 일때  M x N -1을하는 방법이였다 .. 
