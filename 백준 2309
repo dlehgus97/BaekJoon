@@ -1,0 +1,40 @@
+#파이썬
+A = []
+for i in range (1, 10):
+    A.append(int(input()))  #
+    A = sorted(A)
+for i in  A:
+    for j in  A:
+        if  sum(A) - i -j == 100 and i != j:
+            A.remove(i)
+            A.remove(j)
+for i in A:
+    print(i)
+
+//
+include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int A[9] = {};
+    int sum = 0;
+    for (int i = 0; i < 9; i++) {
+        cin >> A[i];
+        sum += A[i];
+    }
+
+    sort(A, A + 9);
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = i + 1; j < 9; j++) {
+            if (sum - A[i] - A[j] == 100) {
+                for (int k = 0; k < 9; k++) {
+                    if (k != i && k != j)  // i 와 j 의 값이 같지 않아야한다 
+                        cout << A[k] << '\n';
+                }
+
+            }
+        }
+    }
+}
