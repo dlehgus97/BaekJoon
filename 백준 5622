@@ -1,11 +1,27 @@
-#파이썬 
-a = int(input())
-for i in range(a):
-    count = 0
-    c = list(map(int, input().split()))
-    avg = (sum(c)-c[0])/c[0] #sum(c)-c[0] == sum(c[1:])
-    for j in c[1:]:
-        if j  > avg:
-            count+=1
-    r = count/c[0]*100
-    print(f"{r:.3f}%")
+#파이썬
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+a = list(input())
+time = 0
+for i in a:
+    for j in dial:
+        if i in j:
+            time += dial.index(j)+ 3  #index 는 위치반환이다. dial.index(j)는 dial에서 j가 위치한 자리를 알려준다.
+print(time)
+
+//c++
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+	int num[26] = { 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10, 10 };
+	int result = 0;
+	string s;
+	cin >> s;
+	for (int i = 0; i < s.length(); i++) {
+		int total = s[i] - 65;   //대문자 알파벳이기떄문에 (65~90)임으로 해당 알파벳에서 아스키코드를 뺴주고 total 값을 num 배열에 해당하는 수를 가져가게 해준다. 
+		result += num[total];
+	}
+	cout << result << "\n";
+}
