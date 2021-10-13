@@ -1,0 +1,40 @@
+#파이썬
+a = int(input())
+for i in range(a):
+    num = 0
+    result = list(map(int,input().split()))    #파이썬에서는 숫자 제한을 안하고 그냥 같이 입력을 받는다 . 
+    avg = sum(result[1:])/result[0]           #그래서 result[0]이 몇개 입력받을지 숫자이다. 따라서 평균을 구할때도 result[1:]부터 하고 result[0]을 나눠주면 된다.
+    for j in result[1:]:                      #여기서도 result[1:]이 성적의 시작이기떄문에 이렇게 조건을 걸어준다 .
+        if j>avg:
+            num+=1
+    total_avg = (num/result[0])*100
+    print(f"{total_avg:.3f}%") #반올림한 세자리수 
+    
+//c++
+#include<iostream>
+using namespace std;
+
+int main() {
+	int a;
+	int result[1000];
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		int b;
+		int num = 0;
+		int sum = 0;
+		cin >> b;
+		for (int j = 0; j < b; j++) {
+			cin >> result[j];         
+			sum += result[j];        
+		}	
+		double avg = sum / double(b);     //소수점을 포함한 수를구해야하기 떄문에 doubel로 하였고 double x int 는 double이 된다.
+		for (int k = 0; k < b; k++) {     //여기서는 위에 int j 와 다르기떄문에 int j를 다시 사용해도 되지만 그냥 보기쉽게 int k룰 사용헸다.
+			if (avg < result[k]) {
+				num += 1;
+			}
+		}
+		cout << fixed;                //소수점을 고정시켜주는 fixed
+		cout.precision(3);            //소수점을 몇번쨰 자리까지 표현해줄지 나타내준다. *무조건 반올림된다.
+		cout << num / double(b) * 100 <<"%"<< endl;   //답을 다 구했는데 소수점을 표현 못할수도 있기에 dobble(b)를 이용해준다 .
+	}
+}
