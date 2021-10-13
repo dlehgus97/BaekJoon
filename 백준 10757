@@ -1,0 +1,6 @@
+#파이썬
+A, B = map(int, input().split())
+print(A+B)
+
+틀려있길래 ...갓이썬 
+C++은 코드가 어렵네 ..
