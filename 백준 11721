@@ -1,0 +1,23 @@
+#파이썬
+a= str(input())
+for i in range(0,len(a),10): # 0부터 len(a)에 해당하는 수를 10개씩 끊어준다.
+    print(a[i:i+10])    #출력시에 i 부터 i+10 까지의 값을 출력한다.
+    
+/
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+	string s;
+	cin >> s;
+	for (int i = 0; i < s.length(); i++) {
+		cout << s[i];
+		if (i % 10 == 9) {
+			cout << "\n";
+		}	
+
+	}
+}
+//s.length()까지 i값을 설정해놓고 출력한다. 근데 if(i % 10 == 9 )을통해 10번째자리(i = 9, 19, 29)씩 끊어주고 내린다.if 문이 cout문 앞에 있기떄문에 i =9 까지출력하고 내리면된다.
