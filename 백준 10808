@@ -1,0 +1,23 @@
+#파이썬
+N = input()
+list = [0]*26
+for i in N:
+    list[ord(i)-97] +=1    #ord 는 유니코드를 돌려받는 함수이며 97는 'a'의 유니코드 값이다 . 따라서 N에 있는 문자열을 찾게된다.
+for i in list:              #그렇게 입력받은 list를 해당되는 값을 출력하는 과정 
+    print(i , end= " ")
+
+//
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+	string s;
+	int arr[26] = {};
+	cin >> s;
+	for (int i = 0; i < s.length(); i++) //입력받은 문자의 개수만큼하기 위해 #include<string>을 해주고 s.length()를 한다.		
+		arr[s[i] - 'a'] += 1;			//배열안 s[i]부터 한글자씩 -'a' 를 해준다 .그렇게 되면 arr에 해당하는 자리에 값이 +1된다.
+	for (int i = 0; i < 26; i++)
+		cout << arr[i] << " ";
+}
