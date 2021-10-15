@@ -1,0 +1,52 @@
+#파이썬 1(2747,2748 방법 동일)
+n = int(input())
+
+a, b = 0, 1
+for i in range(n):
+    a, b = b, a + b
+print(a)
+
+#파이썬 2(2747,2748 방법 동일)
+n = int(input())
+fibo = [0, 1]
+for i in range(n-1):
+    fibo.append(fibo[i] + fibo[i+1])
+print(fibo[n])
+
+//c++ (2747)
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int n;
+	int a[46];
+	a[0] = 0;
+	a[1] = 1;
+	cin >> n;
+	for (int i = 2; i <=n; i++) {
+		a[i] = a[i - 1] + a[i - 2];
+
+	}
+	cout << a[n] << endl;
+}
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int  n;
+	long long a[91];
+	a[0] = 0;
+	a[1] = 1;
+	cin >> n;
+	for (int i = 2; i <=n; i++) {
+		a[i] = a[i - 1] + a[i - 2];
+
+	}
+	cout << a[n] << endl;
+}
+
+//int와 long long 의 차이 재귀를 사용했을때는 시간초과가 나온다 .
