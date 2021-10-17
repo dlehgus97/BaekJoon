@@ -1,0 +1,30 @@
+#파이썬
+result = 0
+ride = []
+for i in range (4):
+    a,b = map(int,input().split())
+    result += b
+    result -=a
+    ride.append(result)
+print(max(ride))
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int max = 0;
+	int result = 0;
+
+	for (int i = 0; i < 4; i++) {
+		int a; int b;
+		cin >> a >> b;
+		result +=  b - a;
+		if (result > max)
+			max = result;
+
+	}
+	cout << max;
+
+}
