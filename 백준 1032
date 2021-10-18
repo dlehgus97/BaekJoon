@@ -1,0 +1,36 @@
+#파이썬
+a = int(input())
+li = list(input())
+for i in range (a-1):
+    b = list(input())
+    for j in range(len(li)):
+        if li[j] != b[j]:
+            li[j]='?'
+print(''.join(li)) #print(li)를 할떄에는 ['c', 'o', 'n', 'f', 'i', 'g', '?', '?', '?', '?'] 이런식으로나온다 .따라서 join을 사용해주어야 한다 .
+
+/c++
+#include<iostream>
+#include<string>
+#include<algorithm>
+
+
+using namespace std;
+
+int main() {
+	int a;
+	string b[50];
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		cin >> b[i];
+	}
+	for (int i = 0; i < b[0].length(); i++) {	
+		for (int j = 1; j < a; j++) {
+			if (b[0][i] != b[j][i]) {  //쉽게 생각해서 b[0][i]는 b[0]의 i번째 문자 라고 생각하면 이해하기 쉽다 .
+			b[0][i] = '?';			   //그래서 b[0]일때 i번째문자와 b[1]일떄 i번째 문자가 다르면 '?'를 출력한다는 의미이다.
+			break;
+		}
+		
+		}
+		cout << b[0][i];
+	}
+}
