@@ -1,0 +1,30 @@
+#파이썬
+a = input()
+li = ["c=","c-","dz=","d-","lj","nj","s=","z="]
+for i in li:
+    a = a.replace(i,".")  #replace를 사용해서 대체 하였으며 대체한 글자를 한글자로 
+print(len(a))
+
+//
+#include<iostream>
+#include<string>
+
+
+using namespace std;
+
+int main() {
+	string s;
+	cin >> s;
+	int word_index;
+	string li[] = { "c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z=" };
+	for (int i = 0; i < 8; i++) {
+
+		while (true) {
+			word_index = s.find(li[i]);	//s에있는문자를 li[i]에서 찾고 word_index에 넣어준다.
+			if (word_index == string::npos)	//만약 word_index에 찾는 문자가 없으면 리턴하고 break해준다 .
+				break;
+			s.replace(word_index, li[i].length(), "*");  //시작위치 , 길이 , 치완문자 이렇게되는 순서 이기 때문에 
+		}	//worde_index가 시작위치가 되는것 find해서 대입 했기때문이다. 
+	}
+	cout << s.length() << endl;
+}
