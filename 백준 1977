@@ -1,0 +1,33 @@
+
+a= int(input())
+b= int(input())
+result = []
+for i in range(101):
+    if a<=i*i and b>=i*i:
+        result.append(int(i*i))
+if sum(result) == 0:
+    print(-1)
+else:
+    print(sum(result))
+    print(min(result))
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a, b;
+	cin >> a >> b;
+	int result = 0;
+	int min = 10000;
+	for (int i = 1; i <= 100; i++) {
+		if (a <= i * i && b >= i * i) {
+			result += i * i;
+			if (i * i < min)
+				min = i * i;
+		}
+	}
+	if (result == 0) cout << -1;
+	else cout << result <<"\n"<<min;
+}
+//그닥 설명이 필요할꺼 같진 않다..
