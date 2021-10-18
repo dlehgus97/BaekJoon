@@ -1,8 +1,31 @@
 #파이썬
 a = int(input())
-
 for i in range(a):
-    num, word = input().split()
-    for x in word:
-        print(x*int(num), end='')  
-    print('')
+    b,word =input().split()
+    for j in word:
+        print(j*int(b),end="") #end를 사용해서 줄바꿈없이 
+    print() #for j in word : 가 끝나고 나서 줄바꿈 
+
+//c++
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		int b; string s;
+		cin >> b >> s;
+		for (int j = 0; j < s.length(); j++) {
+			for (int k = 0; k < b; k++) {
+				cout << s[j];
+			}
+		}
+		cout << endl;
+	}
+	
+}
+
+//그닥 설명이 ..
