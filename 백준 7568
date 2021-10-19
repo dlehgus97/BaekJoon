@@ -1,0 +1,38 @@
+#파이썬
+a = int(input())
+people = []
+for i in range (a):
+  b,c =map(int,input().split())
+  people.append((b,c))
+for j in people:
+    rank = 1
+    for k in people:
+      if j[0]<k[0] and j[1]<k[1]:    #j[0]은 몸무게에 해당하는 전체  j[1]은 키에 해당하는 전체 
+        rank+=1
+    print(rank,end=" ")
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int a;
+	int arr[51][2] = {}; //a가 2 ≤ a ≤ 50 이기떄문에 51개 가들어가며  x,y 좌표 이기 떄문에 2개이다.
+	int result[51];		 // 마찬가지로 결과값도 51개가 들어간다 .
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		cin >> arr[i][0] >> arr[i][1];
+		result[i] = 1;
+	}
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < a; j++) {
+			if (arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1])     // x에 해당하는 값과 y에 해당하는 값이 둘다 작을때 결과값이 1 증가한다 .
+				result[i] += 1;
+		}
+		cout << result[i] << " ";
+	}
+	
+}
+	
+
