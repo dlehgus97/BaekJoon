@@ -1,0 +1,49 @@
+#파이썬 시간오류 풀이 
+a = int(input())
+li = []
+for i in range (a):
+    li.append(int(input()))
+li.sort()
+
+for i in li:
+    print(i)
+    
+#파이썬 풀이    
+import sys    #시간을 줄이기위해 stdin.readline 을 사용하기위해 
+a = int(sys.stdin.readline())
+b = [0] * 10001   #각 인덱스에 0을 할당 해주었다. 
+for i in range(a):
+    b[int(sys.stdin.readline())] += 1       #나오게 된수 만큼 count 가 올라간다 .
+for i in range(10001):
+    if b[i] != 0:
+        for j in range(b[i]):       #b[i]가 int형의 count로 설정했기때문에 i를 count 만큼 출력하면 된다.
+            print(i)
+            
+//c++
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int a;
+	cin >> a;
+	int arr[10001] = { 0 };       //배열을 처음에 다 0으로 설정한다 .
+	for (int i = 0; i < a; i++) {
+		int a;
+		cin >> a;
+		arr[a] += 1;          //입력받은 수에 해당하는 배열이 하나식 증가한다 .
+	}
+
+	for (int i = 0; i < 10001; i++) {
+		for (int j = 0; j < arr[i]; j++) {    //ex> arr[i] == 2 이면 1을 2번 출력한다는 코드이다 . 
+			cout << i << "\n";
+		}
+
+	}
+
+}
