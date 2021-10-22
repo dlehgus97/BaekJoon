@@ -1,0 +1,41 @@
+#파이썬
+a = int(input())
+result = a
+for i in range (a):
+    word = input()
+    for j in range (len(word)-1):  #len(word)는 알파벳의개수로 세기 때문에 범위가 하나 더 추가 된다. ex> happy 라는 단어는 len이 5이 지만 반복문 범위에서는 0부터세기 때문에 4까지만 필요하다 그래서 -1을 해줘야한다.
+        if word[j] == word [j+1]:  #j 단어와 j+1이 같으면 반복되는것이기떄문에 pass를 해준다
+            pass
+        elif word[j] in word[j+1:]: #단어가 같지 않을떄 결과적으로 j에 해당하는 단어가 안나오면 되는것이기떄문에 j+1 다음 단어에서 j에 해당하는 단어가 있는지 확인해준다. 
+            result -= 1             #초기 result 값을 입력하는 int 값으로 해주었으며 조건문이 맞게 되면 -1을 해준면서 result 값을 도출한다 .
+            break
+print(result)
+
+//c++
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+	int a;
+	cin >> a;
+	int result = a;
+	for (int i = 0; i < a; i++) {
+		string s; 
+		cin >> s;
+		for (int j = 0; j < s.length(); j++) {    
+			if (s[j]!=s[j+1])
+				for (int k = j + 1; k < s.length(); k++) {
+					if (s[j] == s[k]) {
+						result -= 1;
+							goto first;
+					}
+				}
+		}
+	first:;
+	}
+	cout << result;
+}
+//코드를 쳤을떄 답이 잘안나와서 비슷하게 코드친사람을 검색했을떄 goto 문을 사용했다.
+//goto는 현재 잘 사용하고 있지 않기때문에 잘 사용하면 안된다고 들었는데 이걸 어떻게 대체해야할지 공부를 해야할 것 같다.
