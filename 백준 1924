@@ -1,0 +1,32 @@
+#파이썬
+total = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+week = ["SUN", "MON","TUE", "WED", "THU", "FRI", "SAT"]
+day = 0
+
+x,y = map(int,input().split())
+for i in range(x-1):
+    day += total[i]    #지정한 x달의 이전의 달을 다 더해준다.
+result = (day+y) %7    #더해진 day에다 y를 더해주고 나온 나머지가 요일에 해당되는 수가 된다. 2007년 1월1일이 월요일이라 가능한상황 다른 년도는 week의 순서를 바꿔줘야한다.
+print(week[result])
+
+//c++
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+	int x, y;
+	int day = 0; int result = 0;
+	int total[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	string week[7] = { "SUN", "MON","TUE", "WED", "THU", "FRI", "SAT" };
+	cin >> x >> y;
+	for (int i = 0; i < x - 1; i++) {
+		day += total[i];
+	}
+	result = (day + y) % 7;
+	cout << week[result];
+
+}
+
+     
