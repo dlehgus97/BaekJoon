@@ -1,0 +1,32 @@
+#파이썬
+while True:
+    a,b = map(int,input().split())
+    if (a==0 and b ==0):
+        break  
+    if (b%a == 0):
+        print("factor")
+    if (a%b == 0):
+        print("multiple")
+    if(a%b !=0 and b%a !=0):
+        print("neither")
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	while (1) {
+		int a, b;
+		cin >> a >> b;
+		if (a == 0 && b == 0)
+			break;
+		if (b % a == 0)
+			cout << "factor"<<endl;
+		if (a % b == 0)
+			cout << "multiple" << endl;
+		else if (b%a != 0 && a%b != 0)
+			cout << "neither" << endl;
+	}
+
+}
