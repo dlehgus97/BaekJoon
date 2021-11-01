@@ -1,0 +1,31 @@
+#파이썬
+n = int(input())
+result = []
+for i in range(n):
+    [a,b] =map(int, input().split())
+    result.append([a,b])
+s_result = sorted(result)
+for i in range(n):
+    print(s_result[i][0],s_result[i][1])  #s_result [i][0]은 i번째 숫자의 좌표의 첫번쨰 자리를 의미한다 .
+    
+//c++
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+#define max 100001 //범위를 최댓값인 1000000이기에 이렇게 설정한다 .
+
+int main() {
+	int n;
+	cin >> n;
+	pair<int, int>result[max];   //pair를 사용하여 각각을 구분지어 저장해주었다 .
+	for (int i = 0; i < n; i++) {
+		cin >> result[i].first >> result[i].second;	//첫번째를 first 두번째를 second 로 하여금 저장한다 .
+	}
+	sort(result, result + n);
+	for (int i = 0; i < n; i++) {
+		cout << result[i].first << " " << result[i].second << "\n";
+	}
+
+
+}
