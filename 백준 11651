@@ -1,0 +1,39 @@
+#파이썬
+n = int(input())
+result = []
+for i in range (n):
+    [a,b] =map(int,input().split())
+    reverse = [b,a]
+    result.append(reverse)
+s_reuslt = sorted(result)
+for i in s_reuslt:
+    print(i[1],i[0])
+
+//c++
+#include<iostream>
+#include<algorithm>
+#define max 100001
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	int n;
+	cin >> n;
+	
+	pair<int, int>result[max];
+	for (int i = 0; i < n; i++) {
+		cin >> result[i].second >> result[i].first;    
+		
+	}
+	sort(result, result + n);  //결과적으로 sort는 first를 기준으로 하기때문에 first 2번째 좌표 자리에 놓아준다.
+                             //입력 받은 값이 똑같기 때문에 sort후에도 똑같이 second를 먼저 출력하면 된다 .
+	for (int i = 0; i < n; i++) {
+		cout << result[i].second << " " << result[i].first << "\n";
+	}
+
+	return 0;
+}
+
