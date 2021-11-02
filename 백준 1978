@@ -1,0 +1,36 @@
+#파이썬
+n = int(input())
+result = map(int,input().split())
+total = 0 
+for i in result:
+    count = 0
+    if (i == 1):
+        continue
+    for j in range(2,i):
+        if(i%j == 0):
+            count +=1
+    if(count == 0):
+            total += 1
+print(total)
+
+//c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int n; int count = 0; int total = 0; int num;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> num;
+		for (int j = 1; j < num; j++) {
+			if (num % j == 0)
+				count += 1;
+		}
+		if (count == 1)
+		total += 1;
+		count = 0;
+		}
+		cout << total;
+	}
+            
