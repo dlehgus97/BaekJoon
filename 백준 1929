@@ -1,18 +1,62 @@
-#파이썬
-M, N = map(int, input().split())
-arr=[]
-
-for i in range(M,N+1):
-    if i==1:
-        pass
-    elif i==2:
-        arr.append(i)
-    else:
-        for j in range(2, i):
-            if i%j==0:
-                break
-            elif j==i-1:
-                arr.append(i)
-
-for i in arr:
+#파이썬 시간초과 방법 1
+a ,b = map(int,input().split())
+result = []
+for i in range (a,b+1):
+    if i == 1:
+        continue
+    elif i==2:  #2부터 나눠야하지만 i가 2이면 for j in ragne(2,i) 를 통해 2는 소수가 아니라는 결과가 나오기때문에 2또한 범위를 설정해준다 .
+        result.append(i)
+    for j in range (2,i):
+        if(i%j==0):     #하나라도 나머지가 0이 안나오면 다음껀 볼필요도 없기떄문에 반복문을 break 해준다 .
+            break
+        elif j==i-1:  # 결과 값을 하나만 출력하기 위해 반복문의 마지막에 해당하는 j== i-1일떄만 출력하게 해준다 .
+            result.append(i)
+for i in result:
     print(i)
+
+#파이썬
+a,b = map(int,input().split())
+result = []
+
+for i in range(a,b+1):
+    if i == 1:
+        continue
+    for j in range(2,int(i**0.5)+1):  #수 전부를 계산하는건 시간낭비이기 떄문에 제곱근 값까지만 계산해도 된다. 
+        if i%j == 0:
+            break
+    else:           #else 는 for j  반복문에 들어가면 안된다 .
+        result.append(i)
+for i in result:
+    print(i)
+    
+
+//c++
+#include<iostream>
+#include<cmath>  //sqrt함수를 사용하기 위해 *제곱근함수이다.
+using namespace std;
+
+bool findprime(int a) {
+
+	if (a < 2)				//1은 소수가 아니다 .
+		return false;
+
+	for (int i = 2; i <= sqrt(a); i++) {
+		if (a % i == 0)
+			return false;		//제곱급까지에서 나머지가 나오게 되면 false다.
+	}
+	return true;
+
+ }
+
+int main() {
+	int n, m;
+	cin >> n >> m;
+
+	for (int i = n; i <= m; i++)		//설정된 범위내에서 
+	{
+		if (findprime(i))			//true 값을 출력한다 .
+			cout << i << "\n";
+
+	}
+
+}
