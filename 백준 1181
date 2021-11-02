@@ -1,11 +1,50 @@
+#파이썬
 n = int(input())
 result = []
 for i in range (n):
-    result.append(input())
-set_reuslt = list(set(result))
-sort_result = []
-for i in set_reuslt:
-    sort_result.append((len(i),i))
-total = sorted(sort_result)
-for i,j in total:
-    print(j)
+    word = input()
+    result.append(word)
+s_result = list(set(result))
+so_result = []
+for i in s_result:
+    so_result.append((len(i),i))
+total = sorted(so_result)   #[(1, 'i'), (2, 'im'), (2, 'it'), (2, 'no'), (3, 'but'), (4, 'more'), (4, 'wait'), (4, 'wont'), (5, 'yours'), (6, 'cannot'), (8, 'hesitate')] 여기 까지 결과값
+for i in total:
+    print(i[1])
+
+
+//c++
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+bool comp(string a, string b) {
+	if (a.size() == b.size())				//길이가 같다면 단어를 
+		return a < b;
+	else									//길이가 같지 않다면 길이로 sort해준다 .
+		return(a.size() < b.size());
+}
+
+int main() {
+	vector<string> v;
+	string s;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		string word;	 
+		cin >> word;
+		v.push_back(word);	//입력받은 word를 추가해준다.
+	}
+	sort(v.begin(), v.end(), comp);	//세번쨰 comp를 집어넣어 함수의 반환값에 맞게 정렬해준다 .
+
+	for (int i = 0; i < n; i++) {
+		if (s == v[i]) continue;	//string s 와 v[i]가 같다면 출력을 안해준다는 의미인데 이는 중복되는 값을 출력하지 않겠다는 의미이다.
+		cout << v[i] << endl;
+		s = v[i];			//다음 단어와 비교하기위해 이전의 단어를 string s에 저장해준다. 이 또한 마찬가지로 중복값을 비교하기위해 저장하는것이다 .
+
+	}
+
+
+}
+//vector을 사용한 문제를 처음 풀어 보았는데 STL공부좀 해야할 것 같다 .
