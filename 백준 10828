@@ -1,26 +1,73 @@
+#파이썬 
 import sys
 n = int(sys.stdin.readline())
+result = []
 
-stack=[]
-for i in range(n):
-    command = sys.stdin.readline().split()
+for i in range (n):
+    ans = sys.stdin.readline().split()
 
-    if command[0]=='push':
-        stack.append(command[1])
-    elif command[0]=='pop':
-        if len(stack)==0:
+    if ans[0] == "push":
+        result.append(ans[1])
+    elif ans[0] == "pop":
+        if(len(result) == 0):
             print(-1)
-        else:
-            print(stack.pop())
-    elif command[0] == 'size':
-        print(len(stack))
-    elif command[0] == 'empty':
-        if len(stack)==0:
+        else :
+            print(result.pop())
+    elif ans[0] == "size":
+        print(len(result))
+    elif ans[0] == "empty":
+        if (len(result) == 0):
             print(1)
         else:
             print(0)
-    elif command[0] == 'top':
-        if len(stack)==0:
+    elif ans[0] == "top":
+        if(len(result) == 0):
             print(-1)
         else:
-            print(stack[-1])
+            print(result[-1])
+ 
+//c++
+
+#include<iostream>
+#include<string>
+#include<stack>
+
+using namespace std;
+
+int main() {
+	int n; 
+	stack<int>ans;
+	string s;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		if (s == "push") {
+			int a;
+			cin >> a;
+			ans.push(a);
+		}
+		else if (s == "pop") {
+			if (ans.empty() == true) {
+				cout << -1 << "\n";
+			}
+			else {
+				cout << ans.top() << "\n";
+				ans.pop();
+			}
+		}
+		else if (s == "size")
+			cout << ans.size() << "\n";
+		else if (s == "empty")
+			if (ans.size() == 0)
+				cout << 1 << "\n";
+			else
+				cout << 0 << "\n";
+		else if (s == "top")
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else
+				cout << ans.top() << "\n";
+	}
+}
+
+//STL중 stack 을 사용했으며 다른건 그냥 노가다 식으로 하면 될듯하다 .
