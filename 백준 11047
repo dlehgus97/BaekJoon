@@ -1,0 +1,39 @@
+#파이썬
+N, K = map(int,input().split())
+result = []
+count = 0
+for i in range(N):
+    c= int(input())
+    result.append(c)
+for i in reversed (range(N)):
+    count += K//result[i]
+    K = K%result[i]
+print(count)
+
+
+//c++
+
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int N, K;
+	cin >> N >> K;
+	int result[11];
+	int count = 0;
+	for (int i = 0; i < N; i++) {
+		cin >> result[i];
+
+	}
+	for (int i = N - 1; i >= 0; i--) {  //역순으로 9~0 까지 
+		count += K / result[i];
+		K %= result[i];
+
+	}
+	cout << count;
+
+
+}
+
+//간단하게 K라는 값이 주어지면 count 를 최소화 하기위해 큰돈부터 나눠주어야한다 . 그렇기에 가장 큰돈을 나눠줄수 있는만큼 나눠주고 나눠준값의 나머지를 다시 그다음 작은수로 나눠준다.
