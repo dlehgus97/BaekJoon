@@ -1,20 +1,61 @@
-num = int(input())
+#파이썬
+n = int(input())
 
-for i in range(num):
-  input_data = input()
-  bracket = []
+for i in range (n):
+    result = input()
+    total = []
+    for j in result:
+        if j =="(":
+            total.append(j)
+        elif j ==")":
+            if(len(total)!=0 and total[-1]=="("):
+                total.pop()
+            else :
+                total.append(j)
+                break
+    if len(total) == 0:
+        print("YES")
+    else :
+        print("NO")
+        
+        
 
-  for j in input_data:
-    if j == "(":
-      bracket.append(j)
-    elif j == ")":
-      if len(bracket) != 0 and bracket[-1] == "(":
-        bracket.pop()
-      else:
-        bracket.append(")")
-        break
+//c++
 
-  if len(bracket) == 0:
-    print("YES")
-  else:
-    print("NO")
+#include<iostream>
+#include<stack>
+
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	
+	for (int i = 0; i < n; i++) {
+		string word;
+		cin >> word;
+		stack<char>s;
+		for (int i = 0; i < word.length(); i++) {
+			if (word[i] == '(') {
+				s.push(word[i]);
+			}
+			else if (word[i] == ')') {
+				if (!s.empty() && s.top() == '(')
+					s.pop();
+				else
+					s.push(word[i]);
+
+			}
+
+		}
+		if (s.empty()) {
+			cout << "YES" << "\n";
+		}
+		else  {
+			cout << "NO" << "\n";
+		}
+	}
+	
+}
+
+//간단한 stack을 이용한 자료구조 ... '('를 스택에 추가하고 ')'일때 '(' 를 pop해준다.하지만 조건에 부합하지 않는 ')'이면 추가해주고 !s.empty()에 해당하는 NO를 출력한다 .
