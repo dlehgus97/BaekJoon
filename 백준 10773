@@ -1,0 +1,43 @@
+#파이썬
+k = int(input())
+result = []
+total = 0
+for i in range(k):
+    b = int(input())
+    if b == 0:
+        result.pop()
+    else:
+        result.append(b)
+for i in result:
+    total +=i
+print(total)
+
+
+//c++
+#include<iostream>
+#include<stack>
+
+using namespace std;
+
+int main() {
+	int k;
+	cin >> k;
+	int sum = 0;
+	stack<int>s;
+	for (int i = 0; i < k; i++) {
+		int num;
+		cin >> num;
+		if (num != 0) {
+			s.push(num);
+			sum += s.top();
+		}
+		else {
+			sum -= s.top();
+			s.pop();
+		}
+	}
+	cout << sum;
+
+}
+
+//c++는 #include<stack> 을 사용하여  0이아니면 push해주고 push한 값을 sum에 더해준다. 만약 0이면 먼저 top값을 빼주고 pop을 해준다. 여기서는 먼저 top 값을 빼주는게 중요하다 .
