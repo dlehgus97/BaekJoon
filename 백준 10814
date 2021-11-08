@@ -1,12 +1,37 @@
 @파이썬
-a = int(input())
- 
-list = []
-for i in range(a):
-    age, name = input().split()
-    list.append([int(age),name])
- 
-list.sort(key=lambda x:int(x[0]))
- 
-for i in list:
-    print(i[0],i[1])
+N = int(input())
+result = []
+for i in range (N):
+    result.append(input().split(" "))
+result.sort(key = lambda a : int(a[0]))     #a[0]만 sort하기 위해서 
+for i,j in (result):
+    print(i,j)
+
+
+//c++
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+bool compare(pair<int, string>x, pair<int, string>y) {
+	return x.first < y.first;
+}
+
+int main() {
+	int N;
+	cin >> N;
+	pair<int, string>result;
+	vector<pair<int, string>>arr;
+	for (int i = 0; i < N; i++) {
+		cin >> result.first >> result.second;
+		arr.push_back(result);
+	}
+	stable_sort(arr.begin(), arr.end(), compare);
+	for (int i = 0; i < N; i++) {
+		cout << arr[i].first << ' ' << arr[i].second << '\n';
+	}
+
+}
+
