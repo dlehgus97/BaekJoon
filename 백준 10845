@@ -1,0 +1,85 @@
+#파이썬
+import sys
+n = int(sys.stdin.readline())
+
+queue=[]
+for i in range(n):
+      result = sys.stdin.readline().split()
+
+      if result[0] == "push":
+            queue.append(result[1])
+      elif result[0] == "pop":
+            if(len(queue) == 0):
+                  print(-1)
+            else:
+                  print(queue[0])
+                  queue.pop(0)
+      elif result[0] == "size":
+            print(len(queue))
+      elif result[0] == "empty":
+            if(len(queue) == 0):
+                  print(1)
+            else:
+                  print(0)
+      elif result[0] == "front":
+            if(len(queue) == 0):
+                  print(-1)
+            else:
+                  print(queue[0])
+      elif result[0] == "back":
+            if(len(queue) == 0):
+              print(-1)
+            else:
+              print(queue[-1]) 
+              
+//c++
+#include<iostream>
+#include<queue>
+#include<string>
+
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	queue<int>ans;
+	string s;
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		if (s == "push") {
+			int a;
+			cin >> a;
+			ans.push(a);
+		}
+		else if (s == "pop") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else {
+				cout << ans.front() << "\n";
+				ans.pop();
+			}
+		}
+		else if (s == "size")
+			cout << ans.size() << "\n";
+		else if (s == "empty") {
+			if (ans.empty() == true)
+				cout << 1 << "\n";
+			else 
+				cout<<0<< "\n";
+		}
+		else if (s == "front") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else
+				cout << ans.front() << "\n";
+		}
+		else if (s == "back") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else
+				cout << ans.back() << "\n";
+		}
+	}
+}
+//include<stack> 과 include<queue>를 이용하여 스택과 큐의 문제를 풀수 있다 .
+//간단하게 스택은 마지막에 들어온거부터 즉 괄호검사나 실행취소와 같은원리  큐는 처음 부터들어온 것 부터 즉 식당 줄서기와 비슷한 원리이다.
