@@ -1,0 +1,22 @@
+#파이썬 (시간초과로 pyp3로 하게 되면 풀린다.)
+N, M = map(int, input().split())
+tree = list(map(int, input().split()))
+start = 0
+end = max(tree)
+while(start<=end):  #반복문을 통해 end가 start 보다 작아지는 값이 정답이므로 이를 고려해 범위를 설정해야한다 .
+  mid = (start+end)//2
+  count = 0
+  for i in tree:
+    if i>=mid:
+      count += i-mid
+  if count>=M:
+      start = mid + 1 #mid 를 높이기 위해 
+  else:
+    end = mid - 1 #mid 를 낮추기 위해 
+print(end) 
+
+#결국은 end값과 satrt 값이 같아 지는 경우가 생긴다. 그 경우 아마도 정답과 M값은 1차이 날것이다 . 이에 end = mid -1 을 할경우 start 보다 작아지게 되면서 반복문이 
+#break 된다. 그 end 값이 정답이 된다.
+#이분탐색 문제인데 좀더 생각을 했어야 했다. 
+
+//c++
