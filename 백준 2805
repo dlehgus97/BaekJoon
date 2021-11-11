@@ -20,3 +20,41 @@ print(end)
 #이분탐색 문제인데 좀더 생각을 했어야 했다. 
 
 //c++
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+int n, m;
+vector<int> tree;
+
+int main() {
+	cin >> n >> m;
+	for (long long int i = 0; i < n; i++) { 
+		int x; 
+		cin >> x; 
+		tree.push_back(x); 
+	}
+	int start = 0;
+	int end = *max_element(tree.begin(), tree.end());
+	int result = 0;
+	while (start <= end) {
+		long long int count = 0;
+		int mid = (start + end) / 2;
+		for (long long int i = 0; i < n; i++) {
+			if (tree[i] > mid)
+				count += tree[i] - mid;
+		}
+		if (count >= m)
+			start = mid + 1;
+		else
+			end = mid - 1;
+		
+
+	}
+	cout << end;
+}
+
+//간단하게 생각해보면 vector에 집어 넣어주고 STL algorithm 에 *max_element()를 통해 초기 end 값을 설정하여 이분탐색해가는 과정이다.
+//뒤에 코드는 파이썬 코드랑 동일하다 .
