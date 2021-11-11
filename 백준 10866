@@ -1,0 +1,110 @@
+#파이썬
+import sys
+n = int(sys.stdin.readline())
+
+Deque=[]
+for i in range(n):
+      result = sys.stdin.readline().split()
+
+      if result[0] == "push_front":
+            Deque.insert(0,result[1])
+      elif result[0] == "push_back":
+            Deque.append(result[1])
+      elif result[0] == "pop_front":
+            if(len(Deque) == 0):
+                  print(-1)
+            else:
+                  print(Deque[0])
+                  Deque.pop(0)
+      elif result[0] == "pop_back":
+            if(len(Deque) == 0):
+                  print(-1)
+            else:
+                  print(Deque[-1])
+                  Deque.pop(-1)
+      elif result[0] == "size":
+            print(len(Deque))
+      elif result[0] == "empty":
+            if(len(Deque) == 0):
+                  print(1)
+            else:
+                  print(0)
+      elif result[0] == "front":
+            if(len(Deque) == 0):
+                  print(-1)
+            else:
+                  print(Deque[0])
+      elif result[0] == "back":
+            if(len(Deque) == 0):
+              print(-1)
+            else:
+              print(Deque[-1]) 
+              
+   
+#from collections import deque 을 사용하면 더 쉽게 할수 있다 .
+#push_fornt 는 deque.appendleft(result[1]) 이런식으로 pop.front 는 deque.popleft()
+
+//c++
+#include<iostream>
+#include<deque>
+#include<string>
+
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	deque<int>ans;
+	string s;
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		if (s == "push_front") {
+			int a;
+			cin >> a;
+			ans.push_front(a);
+		}
+		else if (s == "push_back") {
+			int a;
+			cin >> a;
+			ans.push_back(a);
+		}
+		else if (s == "pop_front") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else {
+				cout << ans.front() << "\n";
+				ans.pop_front();
+			}
+		}
+		else if (s == "pop_back") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else {
+				cout << ans.back() << "\n";
+				ans.pop_back();
+			}
+		}
+		else if (s == "size")
+			cout << ans.size() << "\n";
+		else if (s == "empty") {
+			if (ans.empty() == true)
+				cout << 1 << "\n";
+			else
+				cout << 0 << "\n";
+		}
+		else if (s == "front") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else
+				cout << ans.front() << "\n";
+		}
+		else if (s == "back") {
+			if (ans.empty() == true)
+				cout << -1 << "\n";
+			else
+				cout << ans.back() << "\n";
+		}
+	}
+}
+
+
